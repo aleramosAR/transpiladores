@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<title>Transpiladores</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js" integrity="sha512-RNLkV3d+aLtfcpEyFG8jRbnWHxUqVZozacROI4J2F1sTaDqo1dPQYs01OMi1t1w9Y2FdbSCDSQ2ZVdAC8bzgAg==" crossorigin="anonymous"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/main.js"></script>
+<style>
+img { width: 50px; height: auto; display: block; }
+#mensajes { display: flex; border: 1px solid #DDD; height: 300px; padding: 1em; margin-bottom: 1em; overflow: auto; }
+#mensajes .nomensajes { flex: 1; display: flex; align-items: center; justify-content: center; font-style: italic; color: #BBB; }
+#mensajes .mensajes { padding: 0; flex: 1; }
+#mensajes .mensajes li { font-size: 0.9em; list-style: none; margin-bottom: 0.5em; border-bottom: 1px solid #DDD; padding-bottom: 0.3em; }
+#mensajes .mensajes li strong { font-weight: bold; color: #2113a5; }
+#mensajes .mensajes li span { color: #773b19; font-size: 0.8em; }
+#mensajes .mensajes li p { margin-bottom: 0; display: flex; justify-content: space-between; }
+#mensajes .mensajes li .txt { color: #2d7012; font-style: italic; }
+</style>
+</head>
+<body>
+  <header class="navbar navbar-expand-lg navbar-light text-light bg-dark mb-5">
+  <div class="container justify-content-between">
+    <h1 class="navbar-brand h1 mb-0 text-light">Desafio Transpiladores</h1>
+  </div>
+  </header>
+  <main class="container">
+    {{{body}}}
+  </main>
+</body>
+</html>

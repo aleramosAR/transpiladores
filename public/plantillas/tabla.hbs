@@ -1,0 +1,26 @@
+{{#if productos.length}}
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Title</th>
+      <th scope="col">Price</th>
+      <th scope="col">Image</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each productos}}
+    <tr>
+      <th scope="row">{{this.id}}</th>
+      <td>{{this.title}}</td>
+      <td>{{this.price}}</td>
+      <td><img src="https://cdn1.iconfinder.com/data/icons/fruit-39/128/FRUIT_2-{{this.thumbnail}}-128.png" /></td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+{{else}}
+<div class="alert alert-danger mb-5">
+  <strong>No hay productos!</strong>
+</div>
+{{/if}}

@@ -1,0 +1,47 @@
+<div class="col-md-8 col-lg-5 mx-auto">
+  <!-- <form action="/api/productos" method="post"> -->
+  <form onsubmit="return addProduct(this)">
+    <fieldset class="card">
+      <div class="card-header bg-success text-light">Ingresa un nuevo producto</div>
+      <div class="card-body">
+        <div class="mb-3">
+          <label for="title" class="form-label">Titulo</label>
+          <input type="text" name="title" id="title" class="form-control" />
+        </div>
+        <div class="mb-3">
+          <label for="price" class="form-label">Precio</label>
+          <input type="number" name="price" id="price" class="form-control" />
+        </div>
+        <div class="mb-3">
+          <label for="thumbnail" class="form-label">Nombre de la imagen</label>
+          <input type="text" name="thumbnail" id="thumbnail" class="form-control" />
+          <small class="text-black-50">Ingresar n&deg; desde el 01 al 16 (01, 02, 03, etc.)</small>
+        </div>
+        <input type="hidden" id="form" name="form" value="1" />
+        <button class="btn btn-primary btn-lg float-right mt-3">Agregar producto</button>
+      </div>
+    </fieldset>
+  </form>
+</div>
+<hr class="mt-5 mb-5" />
+<h3 class="mb-5">Listado de productos</h3>
+<div id="productos"></div>
+<hr class="mt-5 mb-5" />
+<h3 class="mb-3">Centro de mensajes</h3>
+<div class="form-row mb-2">
+<div class="col-6">
+      <input type="text" name=="usuario" id="usuario" class="form-control" placeholder="Tu Nombre" />
+    </div>
+    </div>
+<form onSubmit="return addMensaje(this)" class="mb-5">
+<div id="mensajes"></div>
+  <div class="form-row">
+    
+    <div class="col-7">
+      <input type="text" name=="texto" id="texto" class="form-control" placeholder="Ingresa un texto..." />
+    </div>
+    <div class="col-2">
+      <input type="submit" class="btn btn-primary col-12" value="Enviar" />
+    </div>
+  </div>
+</form>

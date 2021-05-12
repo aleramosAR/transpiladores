@@ -1,0 +1,14 @@
+{{#if mensajes.length}}
+  <ul class="mensajes">
+  {{#each mensajes}}
+    <li>
+      <p><strong>{{this.usuario}}</strong> <span>{{this.fecha}}</span></p>
+      <p class="txt">{{this.texto}}</p>
+    </li>
+  {{/each}}
+  </ul>
+{{else}}
+  <div class="nomensajes">
+    No hay mensajes
+  </div>
+{{/if}}
